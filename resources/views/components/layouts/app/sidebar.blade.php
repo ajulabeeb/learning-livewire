@@ -15,9 +15,15 @@
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                 </flux:navlist.group>
+
+                <flux:navlist.item icon="rectangle-stack" :href="route('post')" :current="request()->routeIs('post')" wire:navigate>{{ __('Post') }}</flux:navlist.item>
+                <flux:navlist.item icon="briefcase" :href="route('post')" :current="request()->routeIs('post')" wire:navigate>{{ __('Tasks') }}</flux:navlist.item>
             </flux:navlist>
 
+
+
             <flux:spacer />
+
 
             <flux:navlist variant="outline">
                 <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">

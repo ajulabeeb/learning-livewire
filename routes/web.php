@@ -16,9 +16,10 @@ Route::view('dashboard', 'dashboard')
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 
-    Route::get('/home',function(){
-        return view('home');
-     });
+    Route::get('/post',function()
+    {
+        return view('lessons.post');
+    })->name('post');
 
 
     Route::get('settings/profile', Profile::class)->name('settings.profile');
